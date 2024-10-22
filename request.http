@@ -1,0 +1,47 @@
+###
+Post http://localhost:3000/livre/createLivre
+Content-Type: application/json
+
+{
+    "titre" : "Harry Potter 2",
+    "auteur" : "J.K Rowling",
+    "genre" : "fantastique",
+    "rating" : 9
+}
+###
+GET http://localhost:3000/livre/getLivre
+Content-Type: application/json
+
+{
+    "id":3
+}
+###
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email" : "eri1c@gmail.com",
+    "password" : "test"
+}
+
+###
+
+GET http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email" : "eri1c@gmail.com",
+    "password" : "test"
+}
+
+###
+
+GET http://localhost:3000/emprunt/createEmprunt
+Content-Type: application/json
+
+{
+    "userId":1,
+    "livreId" : 1,
+    "dateDebut" : "2022-01-01",
+    "dateRetour" : "2022-01-15"
+}

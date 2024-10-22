@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Livre } from './livre/livre.entites';
 import { User } from './user/user.entites';
+import { EmpruntModule } from './emprunt/emprunt.module';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { User } from './user/user.entites';
       database: 'db.sqlite',
       entities: [Livre,User],
       synchronize: true,
-    }),LivreModule, UserModule],
+    }),LivreModule, UserModule, EmpruntModule],
   controllers: [AppController],
   providers: [AppService],
 })
